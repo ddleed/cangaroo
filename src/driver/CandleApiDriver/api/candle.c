@@ -89,10 +89,12 @@ bool __stdcall candle_list_scan(candle_list_handle *list)
     }
 
     GUID guid;
-    if (CLSIDFromString(L"{c15b4308-04d3-11e6-b3ea-6057189e6443}", &guid) != NOERROR) {
+    if (CLSIDFromString(L"{35674050-A702-494D-8865-A59A1D28906D}", &guid) != NOERROR) {
         l->last_error = CANDLE_ERR_CLSID;
         return false;
     }
+
+
 
     HDEVINFO hdi = SetupDiGetClassDevs(&guid, NULL, NULL, DIGCF_PRESENT | DIGCF_DEVICEINTERFACE);
     if (hdi == INVALID_HANDLE_VALUE) {

@@ -228,11 +228,12 @@ void CandleApiInterface::open()
         return;
     }
 
-    if (!setBitTiming(_settings.bitrate(), _settings.samplePoint())) {
-        // TODO what?
-        _isOpen = false;
-        return;
-    }
+//TODO fix
+//    if (!setBitTiming(_settings.bitrate(), _settings.samplePoint())) {
+//        // TODO what?
+//        _isOpen = false;
+//        return;
+//    }
 
     uint32_t flags = 0;
     if (_settings.isListenOnlyMode()) {
